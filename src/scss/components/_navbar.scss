@@ -1,0 +1,67 @@
+.site-header {
+transition: all .4s ease;
+background: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 900;
+
+&.navbar-container--scrolled {
+    transition: all .4s ease;
+    background: white;
+}
+
+
+.navbar__container {
+    background: none;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    
+    @media screen and (max-width: $laptop) {
+        width: 90vw;
+    }
+    @media screen and (max-width: $tablet) {
+        width: 95%;
+    }
+
+    .nav__logo {
+        img {
+            width: 140px;
+            @media screen and (max-width: $mobile) {
+                width: 120px;
+            }
+        }
+    }
+
+    .nav__list {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        list-style: none;
+        font-size: $fs-sml;
+
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+
+        .nav__link {
+            transition: all .3s ease;
+            
+            &:hover {
+                transition: all .3s ease;
+                color: $clr-primary;
+            }
+        }
+
+        a {
+            color: $clr-text1;
+        }
+    }
+}
+
+}

@@ -1,0 +1,58 @@
+#error__404__container {
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $clr-primary-darker;
+
+
+
+    .error__404__content {
+        width: 75vw;
+        margin: 0 auto;
+
+        @media screen and (max-width: $tablet) {
+            width: 80vw;
+        }
+        @media screen and (max-width: $mobile) {
+            width: 90vw;
+        }
+
+
+        .error__404__title {
+            font-size: 16rem;
+            color: $clr-primary-lighter;
+            @media screen and (max-width: $tablet) {
+                width: 80vw;
+            }
+            @media screen and (max-width: $mobile) {
+               font-size: 10rem;
+               width: 100%;
+            }
+        }
+
+
+        .error__404__subtitle {
+            color: rgba(255, 255, 255, 0.734);
+            margin: 1rem auto 3rem auto;
+            font-size: 1.4rem;
+            width: 80%;
+            @media screen and (max-width: $tablet) {
+                font-size: 1.4rem;
+                width: 90%;
+            }
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+                font-size: 1rem;
+            }
+        }
+
+        a {
+            @media screen and (max-width: $mobile) {
+               display: block;
+               width: 100%;
+            }
+        }
+    }
+}

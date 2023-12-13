@@ -1,0 +1,341 @@
+/* 
+Theme Name: My Custom Theme
+Author: Matthew Persell-Thompson
+Description: This is a custom build WP Theme
+Version: 1.0
+*/
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
+@media (prefers-reduced-motion) {
+  * {
+    scroll-behavior: none;
+  }
+}
+*:focus {
+  border: solid 1px teal;
+}
+
+body {
+  font-family: "Inter Tight", sans-serif;
+  line-height: 1.5;
+  background: white;
+}
+
+/* Only allow content to be seen by screen-readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only:focus {
+  height: auto;
+  width: auto;
+  padding: 1rem;
+  display: block;
+  clip: auto;
+  z-index: 999;
+  background-color: red;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.color-txt1 {
+  color: #283842 !important;
+}
+
+.color-txt2 {
+  color: teal !important;
+}
+
+.thin-txt {
+  font-weight: 200 !important;
+}
+
+#hero {
+  min-height: 95vh;
+  background-size: cover;
+  background-position: bottom center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+@media screen and (max-width: 1360px) {
+  #hero {
+    min-height: auto;
+  }
+}
+#hero:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.785);
+  z-index: 0;
+}
+#hero .hero__content {
+  z-index: 1;
+  width: 80vw;
+  margin: 4rem auto 0 auto;
+}
+@media screen and (max-width: 1800px) {
+  #hero .hero__content {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 1360px) {
+  #hero .hero__content {
+    margin: 14rem auto 10rem auto;
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 560px) {
+  #hero .hero__content {
+    margin: 10rem auto 4rem auto;
+  }
+}
+#hero .hero__content .hero__title {
+  font-size: 4.5rem;
+  color: #283842;
+  font-weight: 900;
+  width: 20ch;
+}
+@media screen and (max-width: 1360px) {
+  #hero .hero__content .hero__title {
+    width: 80%;
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  #hero .hero__content .hero__title {
+    font-size: 2.8rem;
+    width: 100%;
+  }
+}
+#hero .hero__content .hero__subtitle {
+  font-size: 1.4rem;
+  width: 50vw;
+  font-weight: 300;
+  color: rgb(58, 58, 58);
+  margin: 1rem 0 2rem 0;
+}
+@media screen and (max-width: 1360px) {
+  #hero .hero__content .hero__subtitle {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 560px) {
+  #hero .hero__content .hero__subtitle {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+}
+#hero .hero__content .hero__btn-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 560px) {
+  #hero .hero__content .hero__btn-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  #hero .hero__content .hero__btn-container a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+#error__404__container {
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #1d2930;
+}
+#error__404__container .error__404__content {
+  width: 75vw;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1360px) {
+  #error__404__container .error__404__content {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 560px) {
+  #error__404__container .error__404__content {
+    width: 90vw;
+  }
+}
+#error__404__container .error__404__content .error__404__title {
+  font-size: 16rem;
+  color: #354854;
+}
+@media screen and (max-width: 1360px) {
+  #error__404__container .error__404__content .error__404__title {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 560px) {
+  #error__404__container .error__404__content .error__404__title {
+    font-size: 10rem;
+    width: 100%;
+  }
+}
+#error__404__container .error__404__content .error__404__subtitle {
+  color: rgba(255, 255, 255, 0.734);
+  margin: 1rem auto 3rem auto;
+  font-size: 1.4rem;
+  width: 80%;
+}
+@media screen and (max-width: 1360px) {
+  #error__404__container .error__404__content .error__404__subtitle {
+    font-size: 1.4rem;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 560px) {
+  #error__404__container .error__404__content .error__404__subtitle {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  #error__404__container .error__404__content a {
+    display: block;
+    width: 100%;
+  }
+}
+
+.site-header {
+  transition: all 0.4s ease;
+  background: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 900;
+}
+.site-header.navbar-container--scrolled {
+  transition: all 0.4s ease;
+  background: white;
+}
+.site-header .navbar__container {
+  background: none;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+@media screen and (max-width: 1800px) {
+  .site-header .navbar__container {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 1360px) {
+  .site-header .navbar__container {
+    width: 95%;
+  }
+}
+.site-header .navbar__container .nav__logo img {
+  width: 140px;
+}
+@media screen and (max-width: 560px) {
+  .site-header .navbar__container .nav__logo img {
+    width: 120px;
+  }
+}
+.site-header .navbar__container .nav__list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  font-size: 1rem;
+}
+@media screen and (max-width: 1360px) {
+  .site-header .navbar__container .nav__list {
+    display: none;
+  }
+}
+.site-header .navbar__container .nav__list .nav__link {
+  transition: all 0.3s ease;
+}
+.site-header .navbar__container .nav__list .nav__link:hover {
+  transition: all 0.3s ease;
+  color: #283842;
+}
+.site-header .navbar__container .nav__list a {
+  color: rgb(58, 58, 58);
+}
+
+.btn {
+  transition: all 0.3s ease;
+  outline: none;
+  border: solid 2px white;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.btn.btn--light {
+  background: white;
+  border-color: white;
+  color: black;
+}
+.btn.btn--light:hover {
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+.btn.btn--dark {
+  background: #283842;
+  border-color: #283842;
+  color: white;
+}
+.btn.btn--dark:hover {
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+.btn.btn--transparent {
+  background: none;
+  border-color: rgb(58, 58, 58);
+  color: rgb(58, 58, 58);
+}
+.btn.btn--transparent:hover {
+  transition: all 0.3s ease;
+  background: #283842;
+  color: white;
+}
+
+footer {
+  background: #283842;
+  color: white;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+}
